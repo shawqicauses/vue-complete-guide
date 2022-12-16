@@ -4,17 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE = edge" />
     <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
-    <title>Assignment 00: Data Binding</title>
+    <title>Assignment 02: Reactivity</title>
   </head>
   <body>
     <main id="assignment-container">
-      <h2>{{ myName }}</h2>
-      <p>{{ myAge }}</p>
-      <p>{{ myAge + 5 }}</p>
-      <p>{{ myFavoriteNumber }}</p>
-      <p>{{ generateMyFavoriteNumber() }}</p>
-      <img :src="myImageLink" width="200" />
-      <input type="text" :value="myName" />
+      <h2>Reactivity In Action</h2>
+      <button @click="increase(5)">Increase (5)</button>
+      <button @click="increase(2)">Increase (2)</button>
+      <p>Result: {{ result }}</p>
     </main>
     <script src="https://unpkg.com/vue@3"></script>
     <script src="app.js"></script>

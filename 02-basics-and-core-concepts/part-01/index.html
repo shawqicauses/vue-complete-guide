@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE = edge" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <title>Basics And Core Concepts - Part 01</title>
+  </head>
+  <body>
+    <header id="events-header">
+      <h1 id="events-heading">Vue.JS Events</h1>
+    </header>
+    <main id="events-user">
+      <h2 id="events-sub-heading">Events In Action</h2>
+      <button @click.right.prevent="increment(5)">Increase</button>
+      <button @click.right.prevent="decrement(5)">Decrease</button>
+      <p v-once>Starting Counter: {{ counter }}</p>
+      <p>Result: {{ counter }}</p>
+      <input
+        type="text"
+        v-model="myName"
+        @keyup.enter="updateDisplayName($event)" />
+      <button @click="resetName">Reset Button</button>
+      <p>Your Name: {{ myFullName }}</p>
+      <form @submit.prevent="submitForm">
+        <input type="text" />
+        <button>Sign Up</button>
+      </form>
+    </main>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -8,7 +8,7 @@
   </head>
   <body>
     <main id="goals-container">
-      <form id="goals-form">
+      <form id="goals-form" @submit.prevent>
         <label for="goals-input">Goals</label>
         <input
           type="text"
@@ -16,7 +16,7 @@
           id="goals-input"
           placeholder="Finish Vue.JS Complete Guide"
           v-model="goalsInputValue" />
-        <button type="submit" id="goals-button" v-on:click="goalsInsert">
+        <button type="submit" id="goals-button" @click="goalsInsert">
           Insert Goal
         </button>
       </form>

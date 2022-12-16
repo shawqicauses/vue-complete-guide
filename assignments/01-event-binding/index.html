@@ -4,17 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE = edge" />
     <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
-    <title>Assignment 00: Data Binding</title>
+    <title>Assignment 01: Event Binding</title>
   </head>
   <body>
     <main id="assignment-container">
-      <h2>{{ myName }}</h2>
-      <p>{{ myAge }}</p>
-      <p>{{ myAge + 5 }}</p>
-      <p>{{ myFavoriteNumber }}</p>
-      <p>{{ generateMyFavoriteNumber() }}</p>
-      <img :src="myImageLink" width="200" />
-      <input type="text" :value="myName" />
+      <h2>Event Practice</h2>
+      <button @click="displayAlert">Show Alert</button>
+      <input type="text" @keydown="updateInput" />
+      <p>{{ inputValue }}</p>
+      <input type="text" @keydown.enter="updateDisplayInput" />
+      <p>{{ displayInputValue }}</p>
     </main>
     <script src="https://unpkg.com/vue@3"></script>
     <script src="app.js"></script>

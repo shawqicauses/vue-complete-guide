@@ -7,10 +7,8 @@ Vue.createApp({
   },
   methods: {
     goalsInsert() {
-      this.goals.push(this.goalsInputValue)
+      if (this.goalsInputValue) this.goals.push(this.goalsInputValue)
+      this.goalsInputValue = ""
     }
   }
 }).mount("#goals-container")
-document
-  .querySelector("form")
-  .addEventListener("submit", (event) => event.preventDefault())

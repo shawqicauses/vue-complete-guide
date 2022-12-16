@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE = edge" />
     <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
-    <title>Basics And Core Concepts</title>
+    <title>Basics And Core Concepts - Part 00</title>
   </head>
   <body>
     <header id="goals-header">
@@ -14,8 +14,8 @@
       <h2 id="goals-sub-heading">My Complete Guide Goals</h2>
       <!-- Interpolation w/ Vue.JS -->
       <p>{{ firstCompleteGuideGoal }}</p>
-      <p v-html="secondCompleteGuideGoal">{{ secondCompleteGuideGoal }}</p>
-      <p>Learn more and more about <a v-bind:href="vueJSLink">Vue.JS</a></p>
+      <p v-html="secondCompleteGuideGoal" />
+      <p>Learn more and more about <a :href="vueJSLink">Vue.JS</a></p>
       <p>{{ displayGoal() }}</p>
     </main>
     <script src="https://unpkg.com/vue@3"></script>
