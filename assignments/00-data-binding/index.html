@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE = edge" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <title>Assignment 00: Data Binding</title>
+  </head>
+  <body>
+    <main id="assignment-container">
+      <h2>{{ myName }}</h2>
+      <p>{{ myAge }}</p>
+      <p>{{ myAge + 5 }}</p>
+      <p>{{ myFavoriteNumber }}</p>
+      <p>{{ generateMyFavoriteNumber() }}</p>
+      <img v-bind:src="myImageLink" width="200" />
+      <input type="text" v-bind:value="myName" />
+    </main>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
