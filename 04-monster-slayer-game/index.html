@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE = edge" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <title>Monster Slayer Game</title>
+    <script src="https://unpkg.com/vue@3" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header id="monster-header">
+      <h1 id="monster-heading">Monster Slayer Game</h1>
+    </header>
+    <main id="monster-game">
+      <section id="monster-health">
+        <h2>Monster Health</h2>
+        <div id="monster-health-bar">
+          <progress
+            id="monster-health-progress"
+            :value="monsterHealth"
+            max="100"></progress>
+        </div>
+      </section>
+      <section id="player-health">
+        <h2>Player Health</h2>
+        <div id="player-health-bar">
+          <progress
+            id="player-health-progress"
+            :value="playerHealth"
+            max="100"></progress>
+        </div>
+      </section>
+      <section v-if="winner">
+        <h2>Game Over!</h2>
+        <h3 v-if="winner === 'monster'">You Lost!</h3>
+        <h3 v-else-if="winner === 'player'">You Won!</h3>
+        <h3 v-else>It's A Draw!</h3>
+        <button @click="startGame">Start New Game</button>
+      </section>
+      <section id="monster-controls" v-else>
+        <button @click="attackMonster">Attack</button>
+        <button :disabled="mayUseSpecialAttack" @click="specialAttackMonster">
+          Special Attack
+        </button>
+        <button @click="healPlayer">Heal</button>
+        <button @click="surrenderGame">Surrender</button>
+      </section>
+      <section id="monster-logs">
+        <ul>
+          <li v-for="log in logs" :key="log">
+            <span
+              :style="log.actionBy === 'monster' ? 'color: darkred' : 'color: darkgreen'">
+              {{ log.actionBy }}
+            </span>
+            -
+            <em
+              :style="log.actionType === 'heal' ? 'color: darkcyan' : 'color: darkgray'">
+              {{ log.actionType }}
+            </em>
+            -
+            <b>{{ log.actionValue }}</b>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

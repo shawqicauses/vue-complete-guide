@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE = edge" />
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <title>Vue.JS Behind Scenes</title>
+  </head>
+  <body>
+    <header id="vue-header">
+      <h1 id="vue-heading">Vue.JS Behind Scenes</h1>
+    </header>
+    <main id="vue-user">
+      <h2 id="vue-sub-heading">How Vue.JS Works</h2>
+      <input type="text" ref="userInputElement" />
+      <button @click="insertUserInput">Insert Text</button>
+      <p>{{ userMessage }}</p>
+    </main>
+    <section id="second-application">
+      <p>{{ favoriteTeam }}</p>
+    </section>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
