@@ -5,6 +5,8 @@
   "author": "shawqicauses <shawqicauses@outlook.com>",
   "license": "ISC",
   "devDependencies": {
+    "@vue/eslint-config-airbnb": "7.0.0",
+    "@vue/eslint-config-prettier": "7.0.0",
     "eslint": "8.24.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-next": "12.3.1",
@@ -15,6 +17,7 @@
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-react": "7.31.8",
     "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-vue": "9.8.0",
     "prettier": "2.7.1"
   }
 }

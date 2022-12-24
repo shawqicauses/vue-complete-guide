@@ -1,6 +1,12 @@
 {
-  "extends": ["airbnb", "airbnb/hooks", "plugin:prettier/recommended"],
-  "plugins": ["prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/vue3-recommended",
+    "@vue/eslint-config-airbnb",
+    "@vue/eslint-config-prettier",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["vue", "prettier"],
   "rules": {
     "prettier/prettier": "error",
     "arrow-body-style": "off",
@@ -20,20 +26,10 @@
     "object-shorthand": "off",
     "prefer-arrow-callback": "off",
     "prefer-destructuring": "error",
-    "import/extensions": ["error", {"js": "never", "jsx": "never"}],
-    "react/jsx-filename-extension": ["error", {"extensions": [".js", ".jsx"]}],
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-props-no-spreading": "off",
-    "jsx-a11y/label-has-associated-control": [
-      "error",
-      {"required": {"some": ["nesting", "id"]}}
-    ],
-    "jsx-a11y/label-has-for": [
-      "error",
-      {"required": {"some": ["nesting", "id"]}}
-    ]
+    "import/extensions": ["error", {"vue": "never"}],
+    "vue/component-definition-name-casing": ["error", "kebab-case"]
   },
   "settings": {
-    "import/resolver": {"node": {"extensions": [".js", ".jsx"]}}
+    "import/resolver": {"node": {"extensions": [".vue"]}}
   }
 }
